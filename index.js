@@ -1,7 +1,10 @@
 const fs = require('fs')
 const http = require('http')
 
-const server = http.createServer((req,res) => {
+const server = http.createServer((req, res) => {
+  res.setHeader('Content-Type','text/html')
+  res.write('cheeseburger')
+  res.end()
   console.log('Joined')
 })
 
